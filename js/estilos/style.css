@@ -47,7 +47,7 @@ section#login{
 
     background-color: white;
     width: 500px;
-    height: 870px;
+    height: 855px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
 
@@ -67,7 +67,6 @@ section#login > div#cadastro > p {
     font-size: 17px;
     margin: 1.5px;
     border: black ;
-    margin-top: -20px;
 }
 
 section#login > div#cadastro > form{
@@ -87,6 +86,7 @@ section#login > div#campos{
     background-size: cover;
     padding: 1px;
     margin-top: 10px;
+    margin: 2px;
 }
 
 section#login >input#abrir{
@@ -120,15 +120,8 @@ section#login > p{
     border: 40px;
     border-radius: 7px;
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 2px;
     
-}
-
-input{
-    padding: 5px;
-    margin: 10px;
-    margin-left: 0px;
-    width: 100vw;
 }
 
 input{
@@ -138,7 +131,9 @@ input{
     height: 100%;
     border: 0px;
     border-radius: 8px;
-    padding: 2px;
+    padding: 5px;
+    margin: 9px;
+    margin-left: 0px;
     transform: translateY(-12.5px);
     
 }
@@ -149,8 +144,7 @@ input#pesquise{
     padding: 7px;
     margin: 14px;
     margin-left: 0px;
-    margin-top: 15px;
-    width: calc(100% - 0px); 
+    width: calc(80% - 0px); 
     transform: translateY(-12.5px);
     box-shadow: 0px 0px 5px black;
     
@@ -169,6 +163,22 @@ input:focus-within{
 form > a.botao:hover{
     background-color: #608b8a;
 }
-form > a.botao > i{
-    font-size: 0.8em;
-} 
+
+section#login > div#cadastro > #icon {
+    font-size: larger;
+    font-size: 30px;
+    background-color: lightblue;
+    color: rgba(0, 0, 0, 0.582) !important;
+    border: 1px  solid rgba(97, 97, 97, 0.637);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 7px;
+    padding-top: 5px;
+    height: 37px;
+    transform: translate(-35%, -15%);
+}
+section#login > div#cadastro > #icon:hover{
+    background-color: darkgray;
+    color: black !important;
+}
+ 

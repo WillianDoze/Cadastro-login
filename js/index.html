@@ -17,6 +17,7 @@ Gravar a data e hora da inclusão do registro e exibir no form -->
     <title>Cadastro de cliente</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <main>
@@ -28,12 +29,13 @@ Gravar a data e hora da inclusão do registro e exibir no form -->
         <input class="validacao" type="password" name="Senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required="" minlength="8" maxlength="20">
     </div>
     <input id="abrir" onclick= entrar() type="submit" value="Entrar">
-        
+    
     <div id="imagem"></div>
     <h1>Cadastro de Clientes</h1>
     <div id="cadastro">
     <p style="text-align: center;"><b><i>Cadastre-se ou realize a busca!!</i></b></p>
     <input id="pesquise" type="text" name="nome" placeholder="Pesquise pelos seguintes metódos: Nome, RG e CPF"> 
+    <i id="icon" onclick= teste() class="fa-solid fa-magnifying-glass-plus"></i>
    
     <form action="login.js" method="POST" enctype="multipart/form-data" autocomplete="on">
  
