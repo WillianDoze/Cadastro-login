@@ -25,8 +25,8 @@ Gravar a data e hora da inclusão do registro e exibir no form -->
     <section id="login">
       <p style="text-align: center;">Acesso administrador</p>
     <div id="campos">
-        <input class="validacao" id="ilogin" type="email" name="ilogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="60"><br>
-        <input class="validacao" type="password" name="Senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required="" minlength="8" maxlength="20">
+        <input id="ilogin" type="email" name="ilogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="60"><br>
+        <input type="password" name="Senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required="" minlength="8" maxlength="20">
     </div>
     <input id="abrir" onclick= entrar() type="button" value="Entrar">
     
@@ -37,21 +37,21 @@ Gravar a data e hora da inclusão do registro e exibir no form -->
     <input id="pesquise" type="text" name="nome" placeholder="Pesquise pelos seguintes metódos: Nome, RG e CPF"> 
     <i id="icon" class="fa-solid fa-magnifying-glass-plus"></i>
    
-    <form action="login.php" method="POST" enctype="multipart/form-data" autocomplete="on">
+    <form action="" method="POST" enctype="multipart/form-data" autocomplete="on">
  
-        <input class="validacao" id="Nome" type="text" name="nome" placeholder="Digite seu nome..." required>
-        <input class="validacao" id="cpf" type="text" name="CPF" placeholder="Digite o número do seu CPF utilizando:XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
-        <input class="validacao" id="RG" type="text" name="RG" placeholder="Número do seu RG...."required>
-        <input class="validacao" id="Cep" type="text" name="CEP" placeholder="Digite o seu CEP...." required>
-        <input class="validacao" id="End" type="text" name="Endereco" placeholder="Seu endereço....">
-        <input class="validacao" id="cidade" type="text" name="Cidade" placeholder="Sua cidade....">
-        <input class="validacao" id="UF" type="text" name="Estado" placeholder="Seu Estado....">
-        <input class="validacao" id="Num" type="text" name="Numero" placeholder="Digite o Nº...">
-        <input class="validacao" id="Email" type="email" name="Email" placeholder="Seu e-mail" autocomplete="email" required maxlength="60">
-        <input class="validacao" type="password" name="Senha" placeholder="Digite sua senha">
+        <input class="validacao" id="Nome" type="text" name="nome" placeholder="Digite seu nome..." value="Willian" required>
+        <input class="validacao" id="cpf" type="text" name="CPF" placeholder="Digite o número do seu CPF utilizando:XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" value="451.998.248-05" required>
+        <input class="validacao" id="RG" type="text" name="RG" placeholder="Número do seu RG...." value="5452542172" required>
+        <input class="validacao" id="Cep" type="text" name="CEP" placeholder="Digite o seu CEP...." value="13170-575" required>
+        <input class="validacao" id="End" type="text" name="Endereco" placeholder="Seu endereço...." value="blablablabla">
+        <input class="validacao" id="cidade" type="text" name="Cidade" placeholder="Sua cidade...." value="sumare">
+        <input class="validacao" id="UF" type="text" name="Estado" placeholder="Seu Estado...." value="SP">
+        <input class="validacao" id="Num" type="text" name="Numero" placeholder="Digite o Nº..." value="394">
+        <input class="validacao" id="Email" type="email" name="Email" placeholder="Seu e-mail" autocomplete="email" value="blebleble@gmail.com" required maxlength="60">
+        <input class="validacao" type="password" name="Senha" placeholder="Digite sua senha" value="Willian">
         <input type="file" name="foto" accept=".jpg, .jpeg, .png, .gif" required>
         <input type="submit" onclick=Enviar() name="enviar-formulario" value="Enviar">
-        <label id="relogio" style="font-size: 23px;">Hora</label>
+        <label id="relogio" style="font-size: 23px;"></label>
     </form>
     
     <script src="jquery-3.6.2.js"></script>
@@ -77,18 +77,17 @@ Gravar a data e hora da inclusão do registro e exibir no form -->
       });
 
       // Trecho da validação da foto
-        // const form = document.querySelector("form");
-        // form.addEventListener("submit", function(event) {
-        // event.preventDefault();
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-        // const formatosPermitidos = ["png", "jpeg", "jpg", "gif"];
-        // const arquivo = document.querySelector('input[type="file"]').files[0];
-        // const extensao = arquivo.name.split(".").pop();
-        //  if (formatosPermitidos.includes(extensao)) {
-        // }
+        const formatosPermitidos = ["png", "jpeg", "jpg", "gif"];
+        const arquivo = document.querySelector('input[type="file"]').files[0];
+        const extensao = arquivo.name.split(".").pop();
+         if (formatosPermitidos.includes(extensao)) {
+        }
          //Validação dos inputs
-const Enviar = function() {
-        const validar = document.querySelectorAll(".validacao");
+        const validar = document.getElementsByClassName("validacao");
         const values = [];
         for (let i = 0; i < validar.length; i++) {
         if (validar[i].value) {
@@ -102,10 +101,8 @@ const Enviar = function() {
 
         mostrarHora()
       };
-
-}
         
-// })
+})
 
      
 //Horario no form
@@ -162,6 +159,10 @@ icon.addEventListener('click', function() {
     console.log("Realizar nova busca");
   }
 });
+
+const Enviar = function(){
+
+}
 
 </script>
     </div>
