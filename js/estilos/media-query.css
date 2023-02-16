@@ -7,7 +7,9 @@
 
     section#login{
         width: 992px;
-        height: 810px;
+        height: 800px;
+
+
     }
     
     section#login > div#campos{
@@ -54,6 +56,10 @@
         border: 21px;
         width: 340px;
         border-radius: 5px;   
+    }
+    section#login > p:hover{
+        background-color: rgba(115, 160, 243, 0.815);
+        color: black;
     }
     section#login > div#cadastro > i#icon{
         transform: translate(-40%, -15%);

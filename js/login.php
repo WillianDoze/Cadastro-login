@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 $sqlquery = "INSERT INTO clientes VALUES
-    ('$_POST[nome]', '$_POST[CPF]', '$_POST[RG]', '$_POST[CEP]', '$_POST[Endereco]', '$_POST[Cidade]', '$_POST[Estado]', '$_POST[Numero]', '$_POST[Email]', '','')";
+    ('$_POST[nome]', '$_POST[CPF]', '$_POST[RG]', '$_POST[CEP]', '$_POST[Endereco]', '$_POST[Cidade]', '$_POST[Estado]', '$_POST[Numero]', '$_POST[Email]', '$_POST[Senha]','', '')";
  
 if ($conn->query($sqlquery) === TRUE) {
     echo "record inserted successfully";
